@@ -10,4 +10,8 @@
 
 @interface soulMusic : baseMusic
 
+//data members choir members
+@property int amountOfChoirMembers;
+@property int amountofBandMembers;
+
 @end
