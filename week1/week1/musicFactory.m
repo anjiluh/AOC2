@@ -10,4 +10,8 @@
 
 @implementation musicFactory
 
++(baseMusic *)createNewMusic: (int)musicType
+{
+    return [[countryMusic alloc] init];
+}
 @end
