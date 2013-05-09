@@ -25,4 +25,11 @@
     return self;
 };
 
+//overriding studio time hours to factor in unique data members
+-(void)calculateStudioTime
+{
+    [self setStudioTimeHours:(amountOfAccousticGuitars * howLongTheyPlay)];
+    NSLog(@"This country band needs %i hours in the studio.", self.studioTimeHours);
+}
+
 @end
