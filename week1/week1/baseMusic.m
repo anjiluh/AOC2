@@ -26,4 +26,12 @@
     return self;
 }
 
+//calculation find studio time
+-(void)calculateStudioTime
+{
+    // no calculation right now. just current value
+    NSLog(@"This music needs %i hours of studio time", studioTimeHours);
+}
+
+
 @end
