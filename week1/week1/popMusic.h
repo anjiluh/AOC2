@@ -10,4 +10,9 @@
 
 @interface popMusic : baseMusic
 
+
+@property NSString *popSinger;
+@property int amountOfFans;
+@property int totalSecurityGuards;
+
 @end
