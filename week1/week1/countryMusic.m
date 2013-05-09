@@ -10,5 +10,19 @@
 
 @implementation countryMusic
 
+@synthesize amountOfAccousticGuitars, howLongTheyPlay;
+
+//customizing init to set unique data members
+-(id)init
+{
+    self = [super init];
+    if (self != nil)
+    {
+        [self setStudioTimeHours:20];
+        [self setAmountOfAccousticGuitars:3];
         [self setHowLongTheyPlay:2];
+    }
+    return self;
+};
+
 @end
