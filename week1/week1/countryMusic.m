@@ -10,4 +10,5 @@
 
 @implementation countryMusic
 
+        [self setHowLongTheyPlay:2];
 @end

@@ -10,4 +10,8 @@
 
 @interface countryMusic : baseMusic
 
+//data members for extra accoustic guitars and how long they will play
+@property int amountOfAccousticGuitars;
+@property int howLongTheyPlay;
+
 @end
