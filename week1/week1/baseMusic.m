@@ -10,4 +10,20 @@
 
 @implementation baseMusic
 
+//synthesize creates get and set methods for each property
+@synthesize instruments,instructions,studioTimeHours;
+
+//initialie base music, creating an instance and setting time to zero
+-(id)init
+{
+    self = [super init];
+    if (self !=nil)
+    {
+        [self setStudioTimeHours:0];
+        [self setInstruments:nil];
+        instructions=nil;
+    }
+    return self;
+}
+
 @end
