@@ -44,18 +44,24 @@
     if (justinBieber !=nil)
     {
         [justinBieber setPopSinger:@"Justin Bieber"];
-        [justinBieber setAmountOfFans:10,000,000];
-        [justinBieber setTotalSecurityGuards:1,000];
+        [justinBieber setAmountOfFans:1000];
+        [justinBieber setTotalSecurityGuards:10];
         
         //calculate amount of studio time needed
         [justinBieber calculateStudioTime];
     }
     
     //create a soul music band and determine amount of choir members and band members
+    soulMusic *aliciaKeys = (soulMusic*)[musicFactory createNewMusic:SOUL];
     
-    //set members names, set lists, and music output to log
+    if (aliciaKeys !=nil)
+    {
+        [aliciaKeys setAmountOfChoirMembers:0];
+        [aliciaKeys setAmountofBandMembers:3];
+    
     //calculate and log studio time
-    
+        [aliciaKeys calculateStudioTime];
+    }
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
