@@ -39,10 +39,20 @@
     }
     
     //create a pop music band and set artist
-    //set members names, set lists to output log
-    //calculate and log studio time
+    popMusic *justinBieber = (popMusic*)[musicFactory createNewMusic:POP];
+    
+    if (justinBieber !=nil)
+    {
+        [justinBieber setPopSinger:@"Justin Bieber"];
+        [justinBieber setAmountOfFans:10,000,000];
+        [justinBieber setTotalSecurityGuards:1,000];
+        
+        //calculate amount of studio time needed
+        [justinBieber calculateStudioTime];
+    }
     
     //create a soul music band and determine amount of choir members and band members
+    
     //set members names, set lists, and music output to log
     //calculate and log studio time
     
