@@ -32,9 +32,11 @@
         NSLog(@"This country band "
               "with the members %@", [ladyAntebellum members]);
         NSLog(@"%@", ladyAntebellum.setList);
-    }
+    
     
     //calculate and log studio time based upon play time
+        [ladyAntebellum calculateStudioTime];
+    }
     
     //create a pop music band and set artist
     //set members names, set lists to output log
