@@ -20,8 +20,8 @@ typedef enum {
 } musicEnum;
 
 //data members for creating music instruments needed, instructions to band members, studio time hours
-@property NSArray *instruments;
-@property NSString *instructions;
+@property NSArray *members;
+@property NSString *setList;
 @property int studioTimeHours;
 
 //initialize
