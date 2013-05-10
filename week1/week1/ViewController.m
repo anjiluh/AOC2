@@ -43,7 +43,7 @@
     
     if (justinBieber !=nil)
     {
-        [justinBieber setPopSinger:@"Justin Bieber"];
+   //     [justinBieber setPopSinger:@"Justin Bieber"];
         [justinBieber setAmountOfFans:1000];
         [justinBieber setTotalSecurityGuards:10];
         

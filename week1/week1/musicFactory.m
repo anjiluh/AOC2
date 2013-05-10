@@ -12,6 +12,17 @@
 
 +(baseMusic *)createNewMusic: (int)musicType
 {
-    return [[countryMusic alloc] init];
+    //if country is requested select country
+    if (musicType == COUNTRY){
+        return [[countryMusic alloc] init];
+        
+        //if POP is requested select POP
+    }else if (musicType == POP) {
+        return [[popMusic alloc] init];
+        //if soul requested select soul
+      
+    } else if (musicType == SOUL){
+        return [[soulMusic alloc] init];
+    } else return nil;
 }
 @end
