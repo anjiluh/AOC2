@@ -76,22 +76,29 @@
 -(IBAction)onClick:(id)sender;
 {
     UIButton *button = (UIButton*)sender;
-   self->countryButton.enabled = NO;
-    self->popButton.enabled = NO;
-    self->soulButton.enabled = NO;
+   
     
     if (button != nil)
     {
         if (button.tag == 0)
         {
+            countryButton.enabled = true;
+            popButton.enabled = false;
+            soulButton.enabled = false;
             NSLog(@"You selected Country");
         }
         else if (button.tag == 1)
         {
+            popButton.enabled = true;
+            soulButton.enabled = false;
+            countryButton.enabled = false;
             NSLog(@"You selected Pop");
         }
         else (button.tag == 2);
         {
+            soulButton.enabled = true;
+            popButton.enabled = false;
+            countryButton.enabled = false;
             NSLog(@"You selected Soul");
         }
     }
