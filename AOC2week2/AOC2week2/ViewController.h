@@ -11,4 +11,13 @@
 
 @interface ViewController : UIViewController
 
+{
+    IBOutlet UIButton *countryButton;
+    IBOutlet UIButton *popButton;
+    IBOutlet UIButton *soulButton;
+    
+}
+
+-(IBAction)onClick:(id)sender;
+
 @end

@@ -73,4 +73,24 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(IBAction)onClick:(id)sender;
+{
+    UIButton *button = (UIButton*)sender;
+    if (button != nil)
+    {
+        if (button.tag == 0)
+        {
+            NSLog(@"You selected Country");
+        }
+        else if (button.tag == 1)
+        {
+            NSLog(@"You selected Pop");
+        }
+        else (button.tag == 2);
+        {
+            NSLog(@"You selected Soul");
+        }
+    }
+}
+
 @end
