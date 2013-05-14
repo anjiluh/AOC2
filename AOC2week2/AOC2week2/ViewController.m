@@ -76,6 +76,9 @@
 -(IBAction)onClick:(id)sender;
 {
     UIButton *button = (UIButton*)sender;
+   self->countryButton.enabled = NO;
+    
+    
     if (button != nil)
     {
         if (button.tag == 0)
@@ -91,6 +94,8 @@
             NSLog(@"You selected Soul");
         }
     }
+//    self->popButton.enabled = NO;
+//    self->soulButton.enabled = NO;
 }
 
 @end

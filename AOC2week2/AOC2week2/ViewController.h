@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "musicFactory.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UITextFieldDelegate>
 
 {
     IBOutlet UIButton *countryButton;
