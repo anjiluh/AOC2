@@ -15,6 +15,8 @@
     IBOutlet UIButton *countryButton;
     IBOutlet UIButton *popButton;
     IBOutlet UIButton *soulButton;
+    IBOutlet UIButton *calculateButton;
+    IBOutlet UIButton *infoButton;
     
 }
 
