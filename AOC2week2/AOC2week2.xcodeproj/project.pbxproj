@@ -23,6 +23,7 @@
 		A53735CD1742B70D00D6AAB3 /* popMusic.m in Sources */ = {isa = PBXBuildFile; fileRef = A53735CC1742B70D00D6AAB3 /* popMusic.m */; };
 		A53735D01742B71900D6AAB3 /* soulMusic.m in Sources */ = {isa = PBXBuildFile; fileRef = A53735CF1742B71900D6AAB3 /* soulMusic.m */; };
 		A53735D31742B7A600D6AAB3 /* musicFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = A53735D21742B7A600D6AAB3 /* musicFactory.m */; };
+		A56269901742D59500EE16D3 /* SecondView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A562698F1742D59500EE16D3 /* SecondView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		A53735CF1742B71900D6AAB3 /* soulMusic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = soulMusic.m; sourceTree = "<group>"; };
 		A53735D11742B7A600D6AAB3 /* musicFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = musicFactory.h; sourceTree = "<group>"; };
 		A53735D21742B7A600D6AAB3 /* musicFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = musicFactory.m; sourceTree = "<group>"; };
+		A562698F1742D59500EE16D3 /* SecondView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				A53735CF1742B71900D6AAB3 /* soulMusic.m */,
 				A53735D11742B7A600D6AAB3 /* musicFactory.h */,
 				A53735D21742B7A600D6AAB3 /* musicFactory.m */,
+				A562698F1742D59500EE16D3 /* SecondView.xib */,
 			);
 			path = AOC2week2;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 				A53735B11742B61000D6AAB3 /* Default@2x.png in Resources */,
 				A53735B31742B61000D6AAB3 /* Default-568h@2x.png in Resources */,
 				A53735B91742B61000D6AAB3 /* ViewController.xib in Resources */,
+				A56269901742D59500EE16D3 /* SecondView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +330,7 @@
 				A53735BE1742B61000D6AAB3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
