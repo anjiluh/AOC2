@@ -35,4 +35,18 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(IBAction)onClose:(id)sender;
+{
+    UIButton *button = (UIButton*)sender;
+    
+    
+    if (button != nil)
+    {
+        if (button.tag == 0)
+        {
+            [self dismissModalViewControllerAnimated:true];
+        }
+    }
+}
+
 @end
