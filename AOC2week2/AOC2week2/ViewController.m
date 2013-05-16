@@ -95,14 +95,14 @@
             countryButton.enabled = false;
             NSLog(@"You selected Pop");
         }
-        else (button.tag == 2);
+        else if (button.tag == 2)
         {
             soulButton.enabled = true;
             popButton.enabled = false;
             countryButton.enabled = false;
             NSLog(@"You selected Soul");
          }
-        if (button.tag == 3)
+        else if (button.tag == 3)
         {
             NSLog("You have selected Calculate");
         }
