@@ -83,42 +83,42 @@
     {
         if (button.tag == 0)
         {
-            countryButton.enabled = true;
-            popButton.enabled = false;
-            soulButton.enabled = false;
+            countryButton.enabled = false;
+            popButton.enabled = true;
+            soulButton.enabled = true;
             NSLog(@"You selected Country");
         }
         else if (button.tag == 1)
         {
-            popButton.enabled = true;
-            soulButton.enabled = false;
-            countryButton.enabled = false;
+            popButton.enabled = false;
+            soulButton.enabled = true;
+            countryButton.enabled = true;
             NSLog(@"You selected Pop");
         }
         else if (button.tag == 2)
         {
-            soulButton.enabled = true;
-            popButton.enabled = false;
-            countryButton.enabled = false;
+            soulButton.enabled = false;
+            popButton.enabled = true;
+            countryButton.enabled = true;
             NSLog(@"You selected Soul");
          }
     
         
-        else if (button.tag == 3)
+        else if(button.tag == 3)
         {
             NSLog(@"You have selected Calculate");
         }
     
-        else (button.tag == 5 );
+        else if (button.tag == 5 )
         {
-     /*       SecondViewController *viewController = [[SecondViewController alloc] initWithNibName:@"SecondView" bundle:nil];
-            if(viewController = nil )
+            SecondViewController *viewController = [[SecondViewController alloc] initWithNibName:@"SecondView" bundle:nil];
+            if(viewController != nil )
             {
        //         viewController.delegate = self;
                 [self presentModalViewController:viewController animated:TRUE];
     
     }
-      */
+      
     
             infoButton.enabled = true;
         NSLog(@"You selected the info button.");
