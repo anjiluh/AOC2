@@ -17,9 +17,11 @@
     IBOutlet UIButton *soulButton;
     IBOutlet UIButton *calculateButton;
     IBOutlet UIButton *infoButton;
+    IBOutlet UISegmentedControl *segmentControl;
     
 }
 
 -(IBAction)onClick:(id)sender;
+-(IBAction)onChange:(id)sender;
 
 @end

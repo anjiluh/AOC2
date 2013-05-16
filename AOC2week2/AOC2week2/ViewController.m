@@ -63,6 +63,8 @@
         //calculate and log studio time
         [aliciaKeys calculateStudioTime];
     }
+    
+    int selectedIndex = segmentControl.selectedSegmentIndex;
 
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
@@ -122,9 +124,35 @@
     
             infoButton.enabled = true;
         NSLog(@"You selected the info button.");
+            }
+        
+        
         }
     }
+ -(IBAction)onChange:(id)sender
+{
+    UISegmentedControl *segControl = (UISegmentedControl*)sender;
+    if (segControl != nil)
+    {
+        int selectedIndex = segControl.selectedSegmentIndex;
+    
+    
+    if (selectedIndex == 0)
+    {
+        self.view.backgroundColor = [UIColor grayColor];
     }
+    else if(selectedIndex == 1)
+    {
+        self.view.backgroundColor = [UIColor blueColor];
+    }
+    else if (selectedIndex = 2)
+    {
+        self.view.backgroundColor = [UIColor greenColor ];
+    }
+    }
+    
+
+}
 
 
 
