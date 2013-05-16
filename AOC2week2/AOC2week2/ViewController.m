@@ -102,9 +102,11 @@
             countryButton.enabled = false;
             NSLog(@"You selected Soul");
          }
+    
+        
         else if (button.tag == 3)
         {
-            NSLog("You have selected Calculate");
+            NSLog(@"You have selected Calculate");
         }
     
         else (button.tag == 5 );
