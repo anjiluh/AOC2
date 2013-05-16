@@ -24,6 +24,7 @@
 		A53735D01742B71900D6AAB3 /* soulMusic.m in Sources */ = {isa = PBXBuildFile; fileRef = A53735CF1742B71900D6AAB3 /* soulMusic.m */; };
 		A53735D31742B7A600D6AAB3 /* musicFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = A53735D21742B7A600D6AAB3 /* musicFactory.m */; };
 		A56269901742D59500EE16D3 /* SecondView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A562698F1742D59500EE16D3 /* SecondView.xib */; };
+		A56269931742D87600EE16D3 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A56269921742D87600EE16D3 /* SecondViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,8 @@
 		A53735D11742B7A600D6AAB3 /* musicFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = musicFactory.h; sourceTree = "<group>"; };
 		A53735D21742B7A600D6AAB3 /* musicFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = musicFactory.m; sourceTree = "<group>"; };
 		A562698F1742D59500EE16D3 /* SecondView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondView.xib; sourceTree = "<group>"; };
+		A56269911742D87600EE16D3 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SecondViewController.h; path = ../SecondViewController.h; sourceTree = "<group>"; };
+		A56269921742D87600EE16D3 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SecondViewController.m; path = ../SecondViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,8 @@
 				A53735D11742B7A600D6AAB3 /* musicFactory.h */,
 				A53735D21742B7A600D6AAB3 /* musicFactory.m */,
 				A562698F1742D59500EE16D3 /* SecondView.xib */,
+				A56269911742D87600EE16D3 /* SecondViewController.h */,
+				A56269921742D87600EE16D3 /* SecondViewController.m */,
 			);
 			path = AOC2week2;
 			sourceTree = "<group>";
@@ -210,6 +215,7 @@
 				A53735CD1742B70D00D6AAB3 /* popMusic.m in Sources */,
 				A53735D01742B71900D6AAB3 /* soulMusic.m in Sources */,
 				A53735D31742B7A600D6AAB3 /* musicFactory.m in Sources */,
+				A56269931742D87600EE16D3 /* SecondViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

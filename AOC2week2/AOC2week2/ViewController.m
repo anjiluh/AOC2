@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "SecondViewController.h"
 
 @interface ViewController ()
 
@@ -100,8 +101,29 @@
             popButton.enabled = false;
             countryButton.enabled = false;
             NSLog(@"You selected Soul");
+         }
+        if (button.tag == 3)
+        {
+            NSLog("You have selected Calculate");
+        }
+    
+        else (button.tag == 5 );
+        {
+     /*       SecondViewController *viewController = [[SecondViewController alloc] initWithNibName:@"SecondView" bundle:nil];
+            if(viewController = nil )
+            {
+       //         viewController.delegate = self;
+                [self presentModalViewController:viewController animated:TRUE];
+    
+    }
+      */
+    
+            infoButton.enabled = true;
+        NSLog(@"You selected the info button.");
         }
     }
-}
+    }
+
+
 
 @end
