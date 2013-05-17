@@ -21,6 +21,7 @@
     IBOutlet UIStepper *stepperControl;
     IBOutlet UITextField *result;
     IBOutlet UILabel *stepperLabel;
+    int currentValue;
 }
 
 -(IBAction)onClick:(id)sender;
