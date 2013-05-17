@@ -17,27 +17,7 @@
 
 - (void)viewDidLoad
 {
-    //create a country music band and set amount of accoustic guitars
-    countryMusic *ladyAntebellum = (countryMusic*)[musicFactory createNewMusic:COUNTRY];
-    [ladyAntebellum setAmountOfAccousticGuitars:3];
-    
-    
-    //set members names, set lists, and music output to log
-    if (ladyAntebellum !=nil){
-        NSArray *countryMembers = [[NSArray alloc] initWithObjects:@"Hillary Scott", @"Charles Kelley", @"Dave Hayewood", nil];
-        [ladyAntebellum setMembers:countryMembers];
-        
-        NSString *countrySetList = @"The band will sing, top performed songs 'Need you now' and 'Lookin for a good time'.";
-        [ladyAntebellum setSetList:countrySetList];
-        
-        NSLog(@"This country band "
-              "with the members %@", [ladyAntebellum members]);
-        NSLog(@"%@", ladyAntebellum.setList);
-        
-        
-        //calculate and log studio time based upon play time
-        [ladyAntebellum calculateStudioTime];
-    }
+  
     
     //create a pop music band and set artist
     popMusic *justinBieber = (popMusic*)[musicFactory createNewMusic:POP];
@@ -64,8 +44,12 @@
         [aliciaKeys calculateStudioTime];
     }
     
+    //default info
     int selectedIndex = segmentControl.selectedSegmentIndex;
 
+    //default textfield
+     result.text = (@"Default band");
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
@@ -89,6 +73,7 @@
             popButton.enabled = true;
             soulButton.enabled = true;
             NSLog(@"You selected Country");
+            result.text = @"Country";
         }
         else if (button.tag == 1)
         {
@@ -96,6 +81,7 @@
             soulButton.enabled = true;
             countryButton.enabled = true;
             NSLog(@"You selected Pop");
+            result.text = @"Pop";
         }
         else if (button.tag == 2)
         {
@@ -103,12 +89,38 @@
             popButton.enabled = true;
             countryButton.enabled = true;
             NSLog(@"You selected Soul");
+            result.text = @"Soul";
          }
     
         
         else if(button.tag == 3)
         {
             NSLog(@"You have selected Calculate");
+            if(countryButton.enabled == false)
+            {
+                //create a country music band
+                countryMusic *ladyAntebellum = (countryMusic*)[musicFactory createNewMusic:COUNTRY];
+                [ladyAntebellum setAmountOfAccousticGuitars:3];
+                
+                
+                //set members names, set lists, and music output to log
+                if (ladyAntebellum !=nil){
+                    NSArray *countryMembers = [[NSArray alloc] initWithObjects:@"Hillary Scott", @"Charles Kelley", @"Dave Hayewood", nil];
+                    [ladyAntebellum setMembers:countryMembers];
+                    
+                    NSString *countrySetList = @"The band will sing, top performed songs 'Need you now' and 'Lookin for a good time'.";
+                    [ladyAntebellum setSetList:countrySetList];
+                    
+                    NSLog(@"This country band "
+                          "with the members %@", [ladyAntebellum members]);
+                    NSLog(@"%@", ladyAntebellum.setList);
+                    
+                    
+                    //calculate and log studio time based upon play time
+                    [ladyAntebellum calculateStudioTime];
+                    result.text = [NSString stringWithFormat:@"This country band %@ with the members %@ will play %@", ladyAntebellum, countryMembers, countrySetList];
+                }
+            }
         }
     
         else if (button.tag == 5 )
@@ -131,26 +143,44 @@
     }
  -(IBAction)onChange:(id)sender
 {
-    UISegmentedControl *segControl = (UISegmentedControl*)sender;
-    if (segControl != nil)
+    UIButton *button = (UIButton*)sender;
+    
+    if(button.tag == 0)
     {
-        int selectedIndex = segControl.selectedSegmentIndex;
+        UISegmentedControl *segControl = (UISegmentedControl*)sender;
+        if (segControl != nil)
+        {
+            int selectedIndex = segControl.selectedSegmentIndex;
     
     
-    if (selectedIndex == 0)
-    {
-        self.view.backgroundColor = [UIColor grayColor];
+            if (selectedIndex == 0)
+            {
+                self.view.backgroundColor = [UIColor grayColor];
+            }
+            else if(selectedIndex == 1)
+            {
+                self.view.backgroundColor = [UIColor blueColor];
+            }
+            else if (selectedIndex == 2)
+            {
+                self.view.backgroundColor = [UIColor greenColor ];
+            }
+        }
     }
-    else if(selectedIndex == 1)
-    {
-        self.view.backgroundColor = [UIColor blueColor];
-    }
-    else if (selectedIndex = 2)
-    {
-        self.view.backgroundColor = [UIColor greenColor ];
-    }
-    }
+   
     
+    else if (button.tag == 6)
+    {
+        
+        UIStepper *stepControl = (UIStepper*) sender;
+            if (stepControl != nil)
+            {
+                int currentValue = stepControl.value;
+                stepperLabel.text = [NSString stringWithFormat:@"%d", currentValue];
+                NSLog(@"Step value = %d", currentValue);
+            }
+        
+    }
 
 }
 

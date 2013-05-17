@@ -18,7 +18,9 @@
     IBOutlet UIButton *calculateButton;
     IBOutlet UIButton *infoButton;
     IBOutlet UISegmentedControl *segmentControl;
-    
+    IBOutlet UIStepper *stepperControl;
+    IBOutlet UITextField *result;
+    IBOutlet UILabel *stepperLabel;
 }
 
 -(IBAction)onClick:(id)sender;
