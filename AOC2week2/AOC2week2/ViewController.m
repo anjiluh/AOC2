@@ -80,43 +80,38 @@
                 
                 
                 //set members names, set lists, and music output to log
-                if (ladyAntebellum !=nil){
+                if (ladyAntebellum !=nil)
+                {
                     NSArray *countryMembers = [[NSArray alloc] initWithObjects:@"Hillary Scott", @"Charles Kelley", @"Dave Hayewood", nil];
                     [ladyAntebellum setMembers:countryMembers];
                     
                     NSString *countrySetList = @"The band will sing, top performed songs 'Need you now' and 'Lookin for a good time'.";
                     [ladyAntebellum setSetList:countrySetList];
                     
-                    NSLog(@"This country band "
-                          "with the members %@", [ladyAntebellum members]);
-                    NSLog(@"%@", ladyAntebellum.setList);
+                    int countryStudioTime = ladyAntebellum.studioTimeHours * currentValue;
                     
                     
                     //calculate and log studio time based upon play time
                     [ladyAntebellum calculateStudioTime];
-                    result.text = [NSString stringWithFormat:@"Country band with members %@ will play %@", countryMembers, countrySetList];
+                    result.text = [NSString stringWithFormat:@"Country band will need %d hours to record", countryStudioTime];
                 }
-               else if (popButton.enabled == false)
+            else if (popButton.enabled == false)
                {
                    //create a pop music band and set artist
                    popMusic *justinBieber = (popMusic*)[musicFactory createNewMusic:POP];
                    
-                   if (justinBieber !=nil)
-                   {
-                       //     [justinBieber setPopSinger:@"Justin Bieber"];
                        [justinBieber setAmountOfFans:1000];
                        [justinBieber setTotalSecurityGuards:10];
-                       
-                
                        //calculate amount of studio time needed
                        [justinBieber calculateStudioTime];
-                       
+                       //tally final studio time
                        int studioTime = justinBieber.totalSecurityGuards * currentValue;
                        NSLog(@"There is %d studio time", studioTime);
                        
                        result.text = [NSString stringWithFormat:@"Pop singer needs %d hours", studioTime];
-                   }
-                   else if (soulButton.enabled == false)
+                }
+                   
+                else if (soulButton.enabled == false)
                    {
                        //create a soul music band and determine amount of choir members and band members
                        soulMusic *aliciaKeys = (soulMusic*)[musicFactory createNewMusic:SOUL];
@@ -134,6 +129,10 @@
                         result.text = [NSString stringWithFormat:@"Soul Music will need %d", soulStudioTime];
                        }
                    }
+                else
+                {
+                    NSLog(@"All buttons are enabled.");
+                }
                }
             }
         }
@@ -155,7 +154,7 @@
         
         
         }
-    }
+    
  -(IBAction)onChange:(id)sender
 {
     UIButton *button = (UIButton*)sender;
