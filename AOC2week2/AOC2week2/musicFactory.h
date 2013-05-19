@@ -14,4 +14,6 @@
 
 @interface musicFactory : NSObject
 
++(baseMusic *) createNewMusic: (int)musicType;
+
 @end

@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "SecondViewController.h"
+#import "musicFactory.h"
 
 @interface ViewController ()
 
