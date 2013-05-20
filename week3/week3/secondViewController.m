@@ -35,4 +35,20 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(IBAction)onClose:(id)sender
+{
+    [self dismissModalViewControllerAnimated:TRUE];
+}
+
+-(IBAction)onChange:(id)sender
+{
+    UIDatePicker *picker = (UIDatePicker*)sender;
+    if (picker != nil)
+    {
+        NSDate *date = picker.date;
+        
+        NSLog(@"date = %@", [date description]);
+    }
+}
+
 @end
