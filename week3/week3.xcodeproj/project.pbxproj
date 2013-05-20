@@ -18,6 +18,8 @@
 		A58C4838174A9A7B008787BC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A58C4837174A9A7B008787BC /* Default-568h@2x.png */; };
 		A58C483B174A9A7B008787BC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A58C483A174A9A7B008787BC /* ViewController.m */; };
 		A58C483E174A9A7B008787BC /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A58C483C174A9A7B008787BC /* ViewController.xib */; };
+		A58C4845174AA5E9008787BC /* secondView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A58C4844174AA5E9008787BC /* secondView.xib */; };
+		A58C4848174AA871008787BC /* secondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A58C4847174AA871008787BC /* secondViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,9 @@
 		A58C4839174A9A7B008787BC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		A58C483A174A9A7B008787BC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		A58C483D174A9A7B008787BC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		A58C4844174AA5E9008787BC /* secondView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = secondView.xib; sourceTree = "<group>"; };
+		A58C4846174AA871008787BC /* secondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = secondViewController.h; sourceTree = "<group>"; };
+		A58C4847174AA871008787BC /* secondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = secondViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +94,9 @@
 				A58C483A174A9A7B008787BC /* ViewController.m */,
 				A58C483C174A9A7B008787BC /* ViewController.xib */,
 				A58C4828174A9A7B008787BC /* Supporting Files */,
+				A58C4844174AA5E9008787BC /* secondView.xib */,
+				A58C4846174AA871008787BC /* secondViewController.h */,
+				A58C4847174AA871008787BC /* secondViewController.m */,
 			);
 			path = week3;
 			sourceTree = "<group>";
@@ -163,6 +171,7 @@
 				A58C4836174A9A7B008787BC /* Default@2x.png in Resources */,
 				A58C4838174A9A7B008787BC /* Default-568h@2x.png in Resources */,
 				A58C483E174A9A7B008787BC /* ViewController.xib in Resources */,
+				A58C4845174AA5E9008787BC /* secondView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +185,7 @@
 				A58C482E174A9A7B008787BC /* main.m in Sources */,
 				A58C4832174A9A7B008787BC /* AppDelegate.m in Sources */,
 				A58C483B174A9A7B008787BC /* ViewController.m in Sources */,
+				A58C4848174AA871008787BC /* secondViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
