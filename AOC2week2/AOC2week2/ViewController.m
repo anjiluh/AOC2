@@ -19,13 +19,13 @@
 - (void)viewDidLoad
 {
     
-
+    
     
     //default info
     int selectedIndex = segmentControl.selectedSegmentIndex;
-
+    
     //default textfield
-     result.text = (@"Default band");
+    result.text = (@"Default band");
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
@@ -40,7 +40,7 @@
 -(IBAction)onClick:(id)sender;
 {
     UIButton *button = (UIButton*)sender;
-   
+    
     
     if (button != nil)
     {
@@ -67,8 +67,8 @@
             countryButton.enabled = true;
             NSLog(@"You selected Soul");
             result.text = @"Soul";
-         }
-    
+        }
+        
         
         else if(button.tag == 3)
         {
@@ -96,67 +96,68 @@
                     [ladyAntebellum calculateStudioTime];
                     result.text = [NSString stringWithFormat:@"Country band will need %d hours to record", countryStudioTime];
                 }
-            else if (popButton.enabled == false)
-               {
-                   //create a pop music band and set artist
-                   popMusic *justinBieber = (popMusic*)[musicFactory createNewMusic:POP];
-                   
-                       [justinBieber setAmountOfFans:1000];
-                       [justinBieber setTotalSecurityGuards:10];
-                       //calculate amount of studio time needed
-                       [justinBieber calculateStudioTime];
-                       //tally final studio time
-                       int studioTime = justinBieber.totalSecurityGuards * currentValue;
-                       NSLog(@"There is %d studio time", studioTime);
-                       
-                       result.text = [NSString stringWithFormat:@"Pop singer needs %d hours", studioTime];
+            }
+                else if (popButton.enabled == false)
+                {
+                    //create a pop music band and set artist
+                    popMusic *justinBieber = (popMusic*)[musicFactory createNewMusic:POP];
+                    
+                    [justinBieber setAmountOfFans:1000];
+                    [justinBieber setTotalSecurityGuards:10];
+                    //calculate amount of studio time needed
+                    [justinBieber calculateStudioTime];
+                    //tally final studio time
+                    int studioTime = justinBieber.totalSecurityGuards * currentValue;
+                    NSLog(@"There is %d studio time", studioTime);
+                    
+                    result.text = [NSString stringWithFormat:@"Pop singer needs %d hours", studioTime];
                 }
-                   
+                
                 else if (soulButton.enabled == false)
-                   {
-                       //create a soul music band and determine amount of choir members and band members
-                       soulMusic *aliciaKeys = (soulMusic*)[musicFactory createNewMusic:SOUL];
-                       
-                       if (aliciaKeys !=nil)
-                       {
-                           [aliciaKeys setAmountOfChoirMembers:0];
-                           [aliciaKeys setAmountofBandMembers:3];
-                           
-                           //calculate and log studio time
-                           [aliciaKeys calculateStudioTime];
-                           int soulStudioTime = aliciaKeys.studioTimeHours - currentValue;
-                           
-                          NSLog(@"Alicia keys needs %d hours in the studio", soulStudioTime);
+                {
+                    //create a soul music band and determine amount of choir members and band members
+                    soulMusic *aliciaKeys = (soulMusic*)[musicFactory createNewMusic:SOUL];
+                    
+                    if (aliciaKeys !=nil)
+                    {
+                        [aliciaKeys setAmountOfChoirMembers:0];
+                        [aliciaKeys setAmountofBandMembers:3];
+                        
+                        //calculate and log studio time
+                        [aliciaKeys calculateStudioTime];
+                        int soulStudioTime = aliciaKeys.studioTimeHours - currentValue;
+                        
+                        NSLog(@"Alicia keys needs %d hours in the studio", soulStudioTime);
                         result.text = [NSString stringWithFormat:@"Soul Music will need %d", soulStudioTime];
-                       }
-                   }
+                    }
+                }
                 else
                 {
                     NSLog(@"All buttons are enabled.");
                 }
-               }
             }
         }
     
-        else if (button.tag == 5 )
+    
+    else if (infoButton.enabled == false )
+    {
+        SecondViewController *viewController = [[SecondViewController alloc] initWithNibName:@"SecondView" bundle:nil];
+        if(viewController != nil )
         {
-            SecondViewController *viewController = [[SecondViewController alloc] initWithNibName:@"SecondView" bundle:nil];
-            if(viewController != nil )
-            {
-       //         viewController.delegate = self;
-                [self presentModalViewController:viewController animated:TRUE];
-    
-    }
-      
-    
-            infoButton.enabled = true;
-        NSLog(@"You selected the info button.");
-            }
-        
-        
+            //         viewController.delegate = self;
+            [self presentModalViewController:viewController animated:TRUE];
+            
         }
+        
+        
+        infoButton.enabled = true;
+        NSLog(@"You selected the info button.");
+    }
     
- -(IBAction)onChange:(id)sender
+    
+}
+
+-(IBAction)onChange:(id)sender
 {
     UIButton *button = (UIButton*)sender;
     
@@ -166,8 +167,8 @@
         if (segControl != nil)
         {
             int selectedIndex = segControl.selectedSegmentIndex;
-    
-    
+            
+            
             if (selectedIndex == 0)
             {
                 self.view.backgroundColor = [UIColor grayColor];
@@ -182,21 +183,21 @@
             }
         }
     }
-   
+    
     
     else if (button.tag == 6)
     {
         
         UIStepper *stepControl = (UIStepper*) sender;
-            if (stepControl != nil)
-            {
-                int currentValue = stepControl.value;
-                stepperLabel.text = [NSString stringWithFormat:@"%d", currentValue];
-                NSLog(@"Step value = %d", currentValue);
-            }
+        if (stepControl != nil)
+        {
+            int currentValue = stepControl.value;
+            stepperLabel.text = [NSString stringWithFormat:@"%d", currentValue];
+            NSLog(@"Step value = %d", currentValue);
+        }
         
     }
-
+    
 }
 
 
