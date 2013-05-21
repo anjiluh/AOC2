@@ -1,14 +1,15 @@
 //
 //  ViewController.m
-//  AOC2week2
+//  week2
 //
-//  Created by Angela Ross on 5/14/13.
+//  Created by Angela Ross on 5/20/13.
 //  Copyright (c) 2013 Angela Waters. All rights reserved.
 //
 
 #import "ViewController.h"
 #import "SecondViewController.h"
 #import "musicFactory.h"
+
 
 @interface ViewController ()
 
@@ -18,8 +19,6 @@
 
 - (void)viewDidLoad
 {
-    
-    
     
     //default info
     int selectedIndex = segmentControl.selectedSegmentIndex;
@@ -97,46 +96,46 @@
                     result.text = [NSString stringWithFormat:@"Country band will need %d hours to record", countryStudioTime];
                 }
             }
-                else if (popButton.enabled == false)
-                {
-                    //create a pop music band and set artist
-                    popMusic *justinBieber = (popMusic*)[musicFactory createNewMusic:POP];
-                    
-                    [justinBieber setAmountOfFans:1000];
-                    [justinBieber setTotalSecurityGuards:10];
-                    //calculate amount of studio time needed
-                    [justinBieber calculateStudioTime];
-                    //tally final studio time
-                    int studioTime = justinBieber.totalSecurityGuards * currentValue;
-                    NSLog(@"There is %d studio time", studioTime);
-                    
-                    result.text = [NSString stringWithFormat:@"Pop singer needs %d hours", studioTime];
-                }
+            else if (popButton.enabled == false)
+            {
+                //create a pop music band and set artist
+                popMusic *justinBieber = (popMusic*)[musicFactory createNewMusic:POP];
                 
-                else if (soulButton.enabled == false)
+                [justinBieber setAmountOfFans:1000];
+                [justinBieber setTotalSecurityGuards:10];
+                //calculate amount of studio time needed
+                [justinBieber calculateStudioTime];
+                //tally final studio time
+                int studioTime = justinBieber.totalSecurityGuards * currentValue;
+                NSLog(@"There is %d studio time", studioTime);
+                
+                result.text = [NSString stringWithFormat:@"Pop singer needs %d hours", studioTime];
+            }
+            
+            else if (soulButton.enabled == false)
+            {
+                //create a soul music band and determine amount of choir members and band members
+                soulMusic *aliciaKeys = (soulMusic*)[musicFactory createNewMusic:SOUL];
+                
+                if (aliciaKeys !=nil)
                 {
-                    //create a soul music band and determine amount of choir members and band members
-                    soulMusic *aliciaKeys = (soulMusic*)[musicFactory createNewMusic:SOUL];
+                    [aliciaKeys setAmountOfChoirMembers:0];
+                    [aliciaKeys setAmountofBandMembers:3];
                     
-                    if (aliciaKeys !=nil)
-                    {
-                        [aliciaKeys setAmountOfChoirMembers:0];
-                        [aliciaKeys setAmountofBandMembers:3];
-                        
-                        //calculate and log studio time
-                        [aliciaKeys calculateStudioTime];
-                        int soulStudioTime = aliciaKeys.studioTimeHours - currentValue;
-                        
-                        NSLog(@"Alicia keys needs %d hours in the studio", soulStudioTime);
-                        result.text = [NSString stringWithFormat:@"Soul Music will need %d", soulStudioTime];
-                    }
-                }
-                else
-                {
-                    NSLog(@"All buttons are enabled.");
+                    //calculate and log studio time
+                    [aliciaKeys calculateStudioTime];
+                    int soulStudioTime = aliciaKeys.studioTimeHours - currentValue;
+                    
+                    NSLog(@"Alicia keys needs %d hours in the studio", soulStudioTime);
+                    result.text = [NSString stringWithFormat:@"Soul Music will need %d", soulStudioTime];
                 }
             }
+            else
+            {
+                NSLog(@"All buttons are enabled.");
+            }
         }
+    }
     
     
     else if (infoButton.enabled == false )
@@ -199,7 +198,6 @@
     }
     
 }
-
 
 
 @end

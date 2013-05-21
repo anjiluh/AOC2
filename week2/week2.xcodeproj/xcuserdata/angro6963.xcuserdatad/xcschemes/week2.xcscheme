@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A53735981742B61000D6AAB3"
-               BuildableName = "AOC2week2.app"
-               BlueprintName = "AOC2week2"
-               ReferencedContainer = "container:AOC2week2.xcodeproj">
+               BlueprintIdentifier = "A58C4880174B04B7008787BC"
+               BuildableName = "week2.app"
+               BlueprintName = "week2"
+               ReferencedContainer = "container:week2.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A53735981742B61000D6AAB3"
-            BuildableName = "AOC2week2.app"
-            BlueprintName = "AOC2week2"
-            ReferencedContainer = "container:AOC2week2.xcodeproj">
+            BlueprintIdentifier = "A58C4880174B04B7008787BC"
+            BuildableName = "week2.app"
+            BlueprintName = "week2"
+            ReferencedContainer = "container:week2.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -51,10 +51,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A53735981742B61000D6AAB3"
-            BuildableName = "AOC2week2.app"
-            BlueprintName = "AOC2week2"
-            ReferencedContainer = "container:AOC2week2.xcodeproj">
+            BlueprintIdentifier = "A58C4880174B04B7008787BC"
+            BuildableName = "week2.app"
+            BlueprintName = "week2"
+            ReferencedContainer = "container:week2.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -69,10 +69,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A53735981742B61000D6AAB3"
-            BuildableName = "AOC2week2.app"
-            BlueprintName = "AOC2week2"
-            ReferencedContainer = "container:AOC2week2.xcodeproj">
+            BlueprintIdentifier = "A58C4880174B04B7008787BC"
+            BuildableName = "week2.app"
+            BlueprintName = "week2"
+            ReferencedContainer = "container:week2.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

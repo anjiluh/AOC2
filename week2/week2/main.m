@@ -1,8 +1,8 @@
 //
 //  main.m
-//  AOC2week2
+//  week2
 //
-//  Created by Angela Ross on 5/14/13.
+//  Created by Angela Ross on 5/20/13.
 //  Copyright (c) 2013 Angela Waters. All rights reserved.
 //
 

@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>AOC2week2.xcscheme</key>
+		<key>week2.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>A53735981742B61000D6AAB3</key>
+		<key>A58C4880174B04B7008787BC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
