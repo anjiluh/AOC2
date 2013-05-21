@@ -27,7 +27,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+
 }
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -35,10 +37,12 @@
     // Dispose of any resources that can be recreated.
 }
 
--(IBAction)onClose:(id)sender
+-(IBAction)onSave:(id)sender
 {
-    [self dismissModalViewControllerAnimated:TRUE];
+   [self dismissModalViewControllerAnimated:TRUE];
 }
+
+
 
 -(IBAction)onChange:(id)sender
 {
@@ -49,6 +53,10 @@
         
         NSLog(@"date = %@", [date description]);
     }
+}
+-(IBAction)closeKeyboard:(id)sender
+{
+    
 }
 
 @end

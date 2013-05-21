@@ -8,10 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@interface secondViewController : UIViewController
 
--(IBAction)onClose:(id)sender;
+@interface secondViewController : UIViewController
+{
+    IBOutlet UIButton *closeKeyboard;
+}
+
+
+-(IBAction)closeKeyboard:(id)sender;
 
 -(IBAction)onChange:(id)sender;
 
+
+-(IBAction)onSave:(id)sender;
 @end
