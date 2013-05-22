@@ -13,6 +13,7 @@
 @end
 
 @implementation secondViewController
+@synthesize delegate;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

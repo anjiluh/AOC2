@@ -32,7 +32,7 @@
     secondViewController *viewController = [[secondViewController alloc] initWithNibName:@"secondView" bundle:nil];
     if (viewController !=nil)
     {
-        [self presentModalViewController:viewController animated:TRUE];
+        [self presentViewController:viewController animated:TRUE completion:nil];
     }
 }
 
