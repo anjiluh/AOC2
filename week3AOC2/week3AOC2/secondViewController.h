@@ -8,11 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol secondViewDelegate <NSObject>
+@required
+-(void)wasSaved:(NSString*)eventTitle dateString:(NSString*)date;
+@end
 
-@interface secondViewController : UIViewController
+@interface secondViewController : UIViewController <UITextFieldDelegate>
 {
     IBOutlet UIButton *closeKeyboard;
     IBOutlet UITextField *eventTitle;
+    NSDate *eventDate;
+    NSDateFormatter *dateFormatter;
+    IBOutlet UIDatePicker *datePicker;
+    NSString *dateString;
+    id<secondViewDelegate> delegate;
 }
 
 
@@ -22,4 +31,6 @@
 
 
 -(IBAction)onSave:(id)sender;
+
+@property (strong) id<secondViewDelegate> delegate;
 @end

@@ -39,19 +39,47 @@
 
 -(IBAction)onSave:(id)sender
 {
-   [self dismissModalViewControllerAnimated:TRUE];
+    NSLog(@"%@ date=%@", eventDate, dateString);
+    dateString = [dateFormatter stringFromDate:eventDate];
+    if((eventTitle.text.length > 1) && (dateString !=nil))
+       {
+           if(delegate !=nil)
+           {
+               [self dismissModalViewControllerAnimated:TRUE];
+               
+               NSLog(@"from second view: date=%@", [dateFormatter stringFromDate:eventDate]);
+           }
+       }
+   else
+       {
+           NSLog(@"No event title or date was selected");
+           UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Alert" message:@"Event title and/or date was not selected. Please enter an event title and date." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+           if(alert !=nil)
+           {
+               [alert show];
+           }
+       }
 }
 
 
 
 -(IBAction)onChange:(id)sender
 {
-    UIDatePicker *picker = (UIDatePicker*)sender;
-    if (picker != nil)
+    eventDate = datePicker.date;
+    NSLog(@"%@", eventDate);
+    datePicker = (UIDatePicker*)sender;
+    
+    if (eventDate != nil)
     {
-        NSDate *date = picker.date;
+        dateFormatter = [[NSDateFormatter alloc] init];
+        if(dateFormatter !=nil)
+        {
+            [dateFormatter setDateStyle:NSDateFormatterShortStyle];
+            
+            [dateFormatter setTimeStyle:NSDateFormatterShortStyle];
+        }
         
-        NSLog(@"date = %@", [date description]);
+        NSLog(@"date = %@", [dateFormatter stringFromDate:eventDate]);
     }
 }
 -(IBAction)closeKeyboard:(id)sender

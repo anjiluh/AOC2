@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "secondViewController.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <secondViewDelegate>
 {
     IBOutlet UITextView *eventList;
     IBOutlet UIButton *addEvent;
