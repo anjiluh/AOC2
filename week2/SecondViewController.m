@@ -44,7 +44,7 @@
     {
         if (button.tag == 0)
         {
-            [self dismissModalViewControllerAnimated:true];
+            [self dismissViewControllerAnimated:true completion:nil];
         }
     }
 }

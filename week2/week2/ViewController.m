@@ -21,7 +21,7 @@
 {
     
     //default info
-    int selectedIndex = segmentControl.selectedSegmentIndex;
+ //   int selectedIndex = segmentControl.selectedSegmentIndex;
     
     //default textfield
     result.text = (@"Default band");
@@ -144,7 +144,7 @@
         if(viewController != nil )
         {
             //         viewController.delegate = self;
-            [self presentModalViewController:viewController animated:TRUE];
+            [self presentViewController:viewController animated:TRUE completion:nil];
             
         }
         
