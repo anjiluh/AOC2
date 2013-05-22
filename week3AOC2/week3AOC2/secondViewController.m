@@ -47,6 +47,8 @@
            {
                [self dismissModalViewControllerAnimated:TRUE];
                
+               [delegate wasSaved:eventTitle.text dateString:[dateFormatter stringFromDate:eventDate]];
+               
                NSLog(@"from second view: date=%@", [dateFormatter stringFromDate:eventDate]);
            }
        }
