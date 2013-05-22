@@ -45,7 +45,7 @@
        {
            if(delegate !=nil)
            {
-               [self dismissModalViewControllerAnimated:TRUE];
+               [self dismissViewControllerAnimated:TRUE completion:nil];
                
                [delegate wasSaved:eventTitle.text dateString:[dateFormatter stringFromDate:eventDate]];
                
