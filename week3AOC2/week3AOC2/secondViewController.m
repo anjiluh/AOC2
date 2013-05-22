@@ -56,7 +56,7 @@
 }
 -(IBAction)closeKeyboard:(id)sender
 {
-    
+    [eventTitle resignFirstResponder];
 }
 
 @end
