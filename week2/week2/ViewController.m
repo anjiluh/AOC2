@@ -106,7 +106,7 @@
                 //calculate amount of studio time needed
                 [justinBieber calculateStudioTime];
                 //tally final studio time
-                int studioTime = justinBieber.studioTimeHours * currentValue;
+                int studioTime = justinBieber.studioTimeHours + currentValue;
                 NSLog(@"There is %d studio time", studioTime);
                 
                 result.text = [NSString stringWithFormat:@"Pop singer needs %d hours", studioTime];
@@ -124,7 +124,7 @@
                     
                     //calculate and log studio time
                     [aliciaKeys calculateStudioTime];
-                    int soulStudioTime = aliciaKeys.studioTimeHours - currentValue;
+                    int soulStudioTime = aliciaKeys.studioTimeHours + currentValue;
                     
                     NSLog(@"Alicia keys needs %d hours in the studio", soulStudioTime);
                     result.text = [NSString stringWithFormat:@"Soul Music will need %d", soulStudioTime];
@@ -190,7 +190,7 @@
         UIStepper *stepControl = (UIStepper*) sender;
         if (stepControl != nil)
         {
-            int currentValue = stepControl.value;
+            currentValue = stepControl.value;
             
             //display value in text field
             result.text = [NSString stringWithFormat:@"Needs %d hours", currentValue];
