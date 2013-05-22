@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "secondViewController.h"
 
 @interface ViewController : UIViewController
+{
+    IBOutlet UITextView *eventList;
+    IBOutlet UIButton *addEvent;
+}
+
+-(IBAction)onClick:(id)sender;
+
 
 @end

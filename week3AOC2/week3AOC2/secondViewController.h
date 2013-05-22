@@ -12,6 +12,7 @@
 @interface secondViewController : UIViewController
 {
     IBOutlet UIButton *closeKeyboard;
+    IBOutlet UITextField *eventTitle;
 }
 
 

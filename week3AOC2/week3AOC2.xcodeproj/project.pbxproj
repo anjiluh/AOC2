@@ -17,7 +17,9 @@
 		A58C486A174AF0A0008787BC /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A58C4869174AF0A0008787BC /* Default@2x.png */; };
 		A58C486C174AF0A0008787BC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A58C486B174AF0A0008787BC /* Default-568h@2x.png */; };
 		A58C486F174AF0A0008787BC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A58C486E174AF0A0008787BC /* ViewController.m */; };
-		A58C4872174AF0A0008787BC /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A58C4870174AF0A0008787BC /* ViewController.xib */; };
+		A58C48C0174C5F19008787BC /* secondView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A58C48BD174C5F19008787BC /* secondView.xib */; };
+		A58C48C1174C5F19008787BC /* secondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A58C48BF174C5F19008787BC /* secondViewController.m */; };
+		A58C48C3174C608A008787BC /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A58C48C2174C608A008787BC /* ViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,7 +38,10 @@
 		A58C486B174AF0A0008787BC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		A58C486D174AF0A0008787BC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		A58C486E174AF0A0008787BC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		A58C4871174AF0A0008787BC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		A58C48BD174C5F19008787BC /* secondView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = secondView.xib; sourceTree = "<group>"; };
+		A58C48BE174C5F19008787BC /* secondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = secondViewController.h; sourceTree = "<group>"; };
+		A58C48BF174C5F19008787BC /* secondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = secondViewController.m; sourceTree = "<group>"; };
+		A58C48C2174C608A008787BC /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,8 +92,11 @@
 				A58C4865174AF09F008787BC /* AppDelegate.m */,
 				A58C486D174AF0A0008787BC /* ViewController.h */,
 				A58C486E174AF0A0008787BC /* ViewController.m */,
-				A58C4870174AF0A0008787BC /* ViewController.xib */,
+				A58C48C2174C608A008787BC /* ViewController.xib */,
 				A58C485C174AF09F008787BC /* Supporting Files */,
+				A58C48BE174C5F19008787BC /* secondViewController.h */,
+				A58C48BF174C5F19008787BC /* secondViewController.m */,
+				A58C48BD174C5F19008787BC /* secondView.xib */,
 			);
 			path = week3AOC2;
 			sourceTree = "<group>";
@@ -162,7 +170,8 @@
 				A58C4868174AF0A0008787BC /* Default.png in Resources */,
 				A58C486A174AF0A0008787BC /* Default@2x.png in Resources */,
 				A58C486C174AF0A0008787BC /* Default-568h@2x.png in Resources */,
-				A58C4872174AF0A0008787BC /* ViewController.xib in Resources */,
+				A58C48C0174C5F19008787BC /* secondView.xib in Resources */,
+				A58C48C3174C608A008787BC /* ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +185,7 @@
 				A58C4862174AF09F008787BC /* main.m in Sources */,
 				A58C4866174AF09F008787BC /* AppDelegate.m in Sources */,
 				A58C486F174AF0A0008787BC /* ViewController.m in Sources */,
+				A58C48C1174C5F19008787BC /* secondViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,14 +198,6 @@
 				A58C485F174AF09F008787BC /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		A58C4870174AF0A0008787BC /* ViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A58C4871174AF0A0008787BC /* en */,
-			);
-			name = ViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

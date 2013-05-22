@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "secondViewController.h"
 
 @interface ViewController ()
 
@@ -24,6 +25,15 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(IBAction)onClick:(id)sender;
+{
+    secondViewController *viewController = [[secondViewController alloc] initWithNibName:@"secondView" bundle:nil];
+    if (viewController !=nil)
+    {
+        [self presentModalViewController:viewController animated:TRUE];
+    }
 }
 
 @end
