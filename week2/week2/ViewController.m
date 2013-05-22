@@ -88,11 +88,11 @@
                     NSString *countrySetList = @"The band will sing, top performed songs 'Need you now' and 'Lookin for a good time'.";
                     [ladyAntebellum setSetList:countrySetList];
                     
-                    int countryStudioTime = ladyAntebellum.studioTimeHours * currentValue;
-                    
-                    
                     //calculate and log studio time based upon play time
                     [ladyAntebellum calculateStudioTime];
+                    
+                    int countryStudioTime = ladyAntebellum.studioTimeHours * currentValue;
+                    
                     result.text = [NSString stringWithFormat:@"Country band will need %d hours to record", countryStudioTime];
                 }
             }
