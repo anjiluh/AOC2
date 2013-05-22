@@ -106,7 +106,7 @@
                 //calculate amount of studio time needed
                 [justinBieber calculateStudioTime];
                 //tally final studio time
-                int studioTime = justinBieber.totalSecurityGuards * currentValue;
+                int studioTime = justinBieber.studioTimeHours * currentValue;
                 NSLog(@"There is %d studio time", studioTime);
                 
                 result.text = [NSString stringWithFormat:@"Pop singer needs %d hours", studioTime];
