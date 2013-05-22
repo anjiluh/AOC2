@@ -191,6 +191,10 @@
         if (stepControl != nil)
         {
             int currentValue = stepControl.value;
+            
+            //display value in text field
+            result.text = [NSString stringWithFormat:@"Needs %d hours", currentValue];
+            
             stepperLabel.text = [NSString stringWithFormat:@"%d", currentValue];
             NSLog(@"Step value = %d", currentValue);
         }

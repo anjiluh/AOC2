@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UITextFieldDelegate>
 
 {
     IBOutlet UIButton *countryButton;
@@ -18,9 +18,9 @@
     IBOutlet UIButton *infoButton;
     IBOutlet UISegmentedControl *segmentControl;
     IBOutlet UIStepper *stepperControl;
+    int currentValue;
     IBOutlet UITextField *result;
     IBOutlet UILabel *stepperLabel;
-    int currentValue;
 }
 
 -(IBAction)onClick:(id)sender;
