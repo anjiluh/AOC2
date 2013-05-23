@@ -20,6 +20,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        delegate = nil;
     }
     return self;
 }
@@ -42,7 +43,7 @@
 {
     NSLog(@"%@ date=%@", eventDate, dateString);
     dateString = [dateFormatter stringFromDate:eventDate];
-    if((eventTitle.text.length > 1) && (dateString !=nil))
+    if((eventTitle.text.length > 1) && (dateString != NULL))
        {
            if(delegate !=nil)
            {
