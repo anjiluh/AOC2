@@ -19,12 +19,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+   eventList.text = @"All Events go here...";
+    [self.view addSubview:eventList];
+ 
+ 
 }
 
 -(IBAction)onClick:(id)sender;
@@ -48,6 +46,12 @@
         eventList.text = [eventList.text stringByAppendingFormat:@"\n\nNew Event:\n%@ \n%@", eventTitle, date];
         NSLog(@"Saved all other events");
     }
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 @end
