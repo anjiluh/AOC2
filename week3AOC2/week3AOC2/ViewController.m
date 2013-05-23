@@ -19,7 +19,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-   eventList.text = @"All Events go here...";
+   eventList.text = @"All Events go here.";
     [self.view addSubview:eventList];
  
  
@@ -30,13 +30,14 @@
     secondViewController *viewController = [[secondViewController alloc] initWithNibName:@"secondView" bundle:nil];
     if (viewController !=nil)
     {
+        viewController.delegate = self;
         [self presentViewController:viewController animated:TRUE completion:nil];
     }
 }
 
 -(void)wasSaved:(NSString*)eventTitle dateString:(NSString*)date
 {
-    if([eventList.text isEqualToString:@"All Events go here..."])
+    if([eventList.text isEqualToString:@"All Events go here."])
     {
         eventList.text = [NSString stringWithFormat:@"%@ \n%@", eventTitle, date];
         NSLog(@"First event saved. Date=%@",date);
