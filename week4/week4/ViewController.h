@@ -12,10 +12,13 @@
 @interface ViewController : UIViewController <secondViewDelegate>
 {
     IBOutlet UITextView *eventList;
-    IBOutlet UIButton *addEvent;
+    
+    IBOutlet UILabel *swipeToOpen;
+    UISwipeGestureRecognizer *swipeOpen;
 }
 
 -(IBAction)onClick:(id)sender;
+-(IBAction)onSwipe:(id)sender;
 
 
 @end

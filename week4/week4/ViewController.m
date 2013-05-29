@@ -19,20 +19,42 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    //default actions
    eventList.text = @"All Events go here.";
     [self.view addSubview:eventList];
  
- 
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    swipeOpen = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(onSwipe:)];
+    swipeOpen.direction = UISwipeGestureRecognizerDirectionLeft;
+    [swipeToOpen addGestureRecognizer:swipeOpen];
+}
+
+-(IBAction)onSwipe:(UISwipeGestureRecognizer*)recognizer
+{
+    
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:1.0f];
+    
+    if(recognizer.direction == UISwipeGestureRecognizerDirectionLeft)
+    {
+        secondViewController *viewController = [[secondViewController alloc] initWithNibName:@"secondView" bundle:nil];
+        if (viewController !=nil)
+        {
+            viewController.delegate = self;
+            [self presentViewController:viewController animated:TRUE completion:nil];
+        }
+        NSLog(@"You should be moving into the second view");
+    }
+    [UIView commitAnimations];
 }
 
 -(IBAction)onClick:(id)sender;
 {
-    secondViewController *viewController = [[secondViewController alloc] initWithNibName:@"secondView" bundle:nil];
-    if (viewController !=nil)
-    {
-        viewController.delegate = self;
-        [self presentViewController:viewController animated:TRUE completion:nil];
-    }
+  
 }
 
 -(void)wasSaved:(NSString*)eventTitle dateString:(NSString*)date

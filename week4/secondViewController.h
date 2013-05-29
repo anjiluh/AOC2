@@ -23,7 +23,11 @@
     NSString *dateString;
     id<secondViewDelegate> delegate;
     IBOutlet UIButton *saveButton;
+    IBOutlet UILabel *swipeToClose;
+    
+    UISwipeGestureRecognizer *swipeClose;
 }
+
 
 
 -(IBAction)closeKeyboard:(id)sender;
@@ -32,6 +36,7 @@
 
 
 -(IBAction)onSave:(id)sender;
+-(IBAction)onSwipe:(id)sender;
 
 @property (strong) id<secondViewDelegate> delegate;
 @end

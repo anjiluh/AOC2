@@ -39,6 +39,20 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)viewDidAppear:(BOOL)animated
+{
+    swipeClose = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(onSwipe:)];
+    swipeClose.direction = UISwipeGestureRecognizerDirectionRight;
+    [swipeToClose addGestureRecognizer:swipeClose];
+    
+    [super viewDidAppear:animated];
+}
+
+-(IBAction)onSwipe:(id)sender
+{
+  
+}
+
 -(IBAction)onSave:(id)sender
 {
     NSLog(@"%@ date=%@", eventDate, dateString);
