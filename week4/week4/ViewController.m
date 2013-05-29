@@ -49,7 +49,7 @@
         }
         NSLog(@"You should be moving into the second view");
     }
-    [UIView commitAnimations];
+   [UIView commitAnimations];
 }
 
 -(IBAction)onClick:(id)sender;

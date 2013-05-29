@@ -85,6 +85,7 @@
     eventDate = datePicker.date;
     NSLog(@"%@", eventDate);
     datePicker = (UIDatePicker*)sender;
+    datePicker.minimumDate = [NSDate date];
     
     if (eventDate != nil)
     {

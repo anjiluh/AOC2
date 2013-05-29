@@ -18,7 +18,7 @@
 }
 
 -(IBAction)onClick:(id)sender;
--(IBAction)onSwipe:(id)sender;
+-(IBAction)onSwipe:(UISwipeGestureRecognizer*)recognizer;
 
 
 @end
