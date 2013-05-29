@@ -21,8 +21,20 @@
 	// Do any additional setup after loading the view, typically from a nib.
     
     //default actions
-   eventList.text = @"All Events go here.";
-    [self.view addSubview:eventList];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if(defaults !=nil)
+    {
+        NSString *eventString = [defaults objectForKey:@"list"];
+        if(eventString !=nil)
+        {
+            eventList.text = eventString;
+        }
+        else
+        {
+            eventList.text = @"All Events go here.";
+            [self.view addSubview:eventList];
+        }
+    }
  
 }
 
@@ -52,9 +64,19 @@
    [UIView commitAnimations];
 }
 
--(IBAction)onClick:(id)sender;
+-(IBAction)onSave:(id)sender;
 {
-  
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    if (defaults !=nil)
+    {
+        NSString *eventString = eventList.text;
+        if(eventString != nil)
+        {
+            [defaults setObject:eventString forKey:@"list"];
+        }
+        [defaults synchronize];
+    }
 }
 
 -(void)wasSaved:(NSString*)eventTitle dateString:(NSString*)date

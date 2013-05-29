@@ -22,7 +22,7 @@
     IBOutlet UIDatePicker *datePicker;
     NSString *dateString;
     id<secondViewDelegate> delegate;
-    IBOutlet UIButton *saveButton;
+    
     IBOutlet UILabel *swipeToClose;
     
     UISwipeGestureRecognizer *swipeClose;

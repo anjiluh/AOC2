@@ -15,10 +15,11 @@
     
     IBOutlet UILabel *swipeToOpen;
     UISwipeGestureRecognizer *swipeOpen;
+    IBOutlet UIButton *saveButton;
 }
 
--(IBAction)onClick:(id)sender;
 -(IBAction)onSwipe:(UISwipeGestureRecognizer*)recognizer;
+-(IBAction)onSave:(id)sender;
 
 
 @end
