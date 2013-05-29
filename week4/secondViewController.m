@@ -48,34 +48,39 @@
     [super viewDidAppear:animated];
 }
 
--(IBAction)onSwipe:(id)sender
+-(IBAction)onSwipe:(UISwipeGestureRecognizer*)recognizer
 {
-  
+  if(recognizer.direction == UISwipeGestureRecognizerDirectionRight)
+  {
+      NSLog(@"%@ date=%@", eventDate, dateString);
+      dateString = [dateFormatter stringFromDate:eventDate];
+      if((eventTitle.text.length > 1) && (dateString != NULL))
+      {
+          
+          [self dismissViewControllerAnimated:TRUE completion:nil];
+          
+          [delegate wasSaved:eventTitle.text dateString:[dateFormatter stringFromDate:eventDate]];
+          
+          NSLog(@"from second view: date=%@", [dateFormatter stringFromDate:eventDate]);
+          
+      }
+      else
+      {
+          NSLog(@"No event title or date was selected");
+          UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Alert" message:@"Event title and/or date was not selected. Please enter an event title and date." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+          if(alert !=nil)
+          {
+              [alert show];
+          }
+      }
+
+  }
+    
 }
 
 -(IBAction)onSave:(id)sender
 {
-    NSLog(@"%@ date=%@", eventDate, dateString);
-    dateString = [dateFormatter stringFromDate:eventDate];
-    if((eventTitle.text.length > 1) && (dateString != NULL))
-       {
-         
-               [self dismissViewControllerAnimated:TRUE completion:nil];
-               
-               [delegate wasSaved:eventTitle.text dateString:[dateFormatter stringFromDate:eventDate]];
-               
-               NSLog(@"from second view: date=%@", [dateFormatter stringFromDate:eventDate]);
-           
-       }
-   else
-       {
-           NSLog(@"No event title or date was selected");
-           UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Alert" message:@"Event title and/or date was not selected. Please enter an event title and date." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-           if(alert !=nil)
-           {
-               [alert show];
-           }
-       }
+  
 }
 
 
