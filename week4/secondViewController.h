@@ -34,8 +34,6 @@
 
 -(IBAction)onChange:(id)sender;
 
-
--(IBAction)onSave:(id)sender;
 -(IBAction)onSwipe:(UISwipeGestureRecognizer*)recognizer;
 
 @property (strong) id<secondViewDelegate> delegate;
