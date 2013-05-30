@@ -56,12 +56,14 @@
       dateString = [dateFormatter stringFromDate:eventDate];
       if((eventTitle.text.length > 1) && (dateString != NULL))
       {
-          
+          if(delegate !=nil)
+          {
           [self dismissViewControllerAnimated:TRUE completion:nil];
           
           [delegate wasSaved:eventTitle.text dateString:[dateFormatter stringFromDate:eventDate]];
           
           NSLog(@"from second view: date=%@", [dateFormatter stringFromDate:eventDate]);
+          }
           
       }
       else
