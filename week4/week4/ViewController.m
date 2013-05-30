@@ -42,7 +42,7 @@
 {
     swipeOpen = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(onSwipe:)];
     swipeOpen.direction = UISwipeGestureRecognizerDirectionRight;
-    [swipeToOpen addGestureRecognizer:swipeOpen];
+    [swipeLabel addGestureRecognizer:swipeOpen];
 }
 
 -(IBAction)onSwipe:(UISwipeGestureRecognizer*)recognizer

@@ -13,7 +13,7 @@
 {
     IBOutlet UITextView *eventList;
     
-    IBOutlet UILabel *swipeToOpen;
+    IBOutlet UILabel *swipeLabel;
     UISwipeGestureRecognizer *swipeOpen;
     IBOutlet UIButton *saveButton;
 }
