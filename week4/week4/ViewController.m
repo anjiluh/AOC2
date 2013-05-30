@@ -41,7 +41,7 @@
 -(void)viewDidAppear:(BOOL)animated
 {
     swipeOpen = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(onSwipe:)];
-    swipeOpen.direction = UISwipeGestureRecognizerDirectionLeft;
+    swipeOpen.direction = UISwipeGestureRecognizerDirectionRight;
     [swipeToOpen addGestureRecognizer:swipeOpen];
 }
 
@@ -51,7 +51,7 @@
     [UIView beginAnimations:nil context:nil];
     [UIView setAnimationDuration:1.0f];
     
-    if(recognizer.direction == UISwipeGestureRecognizerDirectionLeft)
+    if(recognizer.direction == UISwipeGestureRecognizerDirectionRight)
     {
         secondViewController *viewController = [[secondViewController alloc] initWithNibName:@"secondView" bundle:nil];
         if (viewController !=nil)

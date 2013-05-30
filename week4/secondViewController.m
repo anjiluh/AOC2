@@ -42,7 +42,7 @@
 -(void)viewDidAppear:(BOOL)animated
 {
     swipeClose = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(onSwipe:)];
-    swipeClose.direction = UISwipeGestureRecognizerDirectionRight;
+    swipeClose.direction = UISwipeGestureRecognizerDirectionLeft;
     [swipeToClose addGestureRecognizer:swipeClose];
     
     [super viewDidAppear:animated];
@@ -50,7 +50,7 @@
 
 -(IBAction)onSwipe:(UISwipeGestureRecognizer*)recognizer
 {
-  if(recognizer.direction == UISwipeGestureRecognizerDirectionRight)
+  if(recognizer.direction == UISwipeGestureRecognizerDirectionLeft)
   {
       NSLog(@"%@ date=%@", eventDate, dateString);
       dateString = [dateFormatter stringFromDate:eventDate];
